@@ -23,16 +23,8 @@ public class MainMenu {
 	JLabel user = new JLabel("Username");
 	JFrame Menu = new JFrame("Maze of Fury");
 	JButton Start = new JButton("Login");
-	ArrayList<String> mapList = new ArrayList<String>();
-	JComboBox<String> lvlList;
-	
-	
-
 
 	public MainMenu() {
-		//Load map list
-		getMapList();
-		lvlList = new JComboBox<String>(mapList.toArray(new String[mapList.size()]));
 		
 		//Menu Variables
 		Menu.setResizable(false);
@@ -62,24 +54,12 @@ public class MainMenu {
 			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				new Maze(lvlList.getSelectedItem().toString());
+				new Maze("./Level 0.map");
 				Menu.setVisible(false);
 			}
 
 		});	
 
 		Menu.setVisible(true);
-	}
-
-	static boolean levelsExistAlready = false;
-
-	public void getMapList(){
-		for(int i = 0; i < 99; i++){
-			File map = new File("./Level "+i+".map");
-			if(map.exists()){
-				mapList.add("Level "+i+".map");
-				levelsExistAlready = true;
-			}
-		}
 	}
 }

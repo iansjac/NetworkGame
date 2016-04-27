@@ -28,7 +28,7 @@ public class Maze extends JFrame{
         this.setResizable(false);
         this.setSize((_columns*_windowSize)+50, (_rows*_windowSize)+70);
         this.setTitle("Maze");
-        this.setLayout(null);
+       this.setLayout(null);
         
         this.addKeyListener(new KeyListener(){
 
@@ -54,7 +54,6 @@ public class Maze extends JFrame{
 				}
 				
 				//player2 movement
-				//Player movement
 				if(key == KeyEvent.VK_W){
 					player2.moveUp();
 				}
@@ -163,10 +162,10 @@ public class Maze extends JFrame{
             for(int y = 0; y < _columns; y++){
                 for(int x = 0; x < _rows; x++){
                     String mapChar = mapStr.substring(counter, counter+1);
-                    if(!mapChar.equals("\r\n") && !mapChar.equals("\n")&& !mapChar.equals("\r")){//If it's a number
-                        //System.out.print(mapChar);
+                    if(!mapChar.equals("\r\n") && !mapChar.equals("\n")&& !mapChar.equals("\r")){
+                        
                         _map[x][y] = Integer.parseInt(mapChar);
-                    }else{//If it is a line break
+                    }else{
                         x--;
                         System.out.print(mapChar);
                     }
@@ -174,7 +173,7 @@ public class Maze extends JFrame{
                 }
             }
         }catch(Exception e){
-            System.out.println("Unable to load existing map(if exists), creating new map.");
+           
         }
     }
 }
