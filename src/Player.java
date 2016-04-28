@@ -17,6 +17,11 @@ public class Player extends JPanel{
     	this.setBackground(c);
     }
     
+  /*  public void setLocation(int _x, int _y){
+    	this._x = _x;
+    	this._y = _y;
+    }
+    */
     public void moveLeft() {
     	if(_x > 0 && Maze._map[_x-1][_y] == 1){
 	    	this.setLocation(this.getX()-25, this.getY());

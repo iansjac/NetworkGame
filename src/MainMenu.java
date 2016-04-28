@@ -56,9 +56,7 @@ public class MainMenu {
 		portnum.setLocation(100, 200);
 		port = portnum.getText();
 		Menu.add(portnum);
-		
-		
-				
+			
 		//username
 		user.setSize(150, 20);
 		user.setLocation(100, 75);
