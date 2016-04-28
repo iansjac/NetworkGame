@@ -1,12 +1,6 @@
-import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.util.ArrayList;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
@@ -23,6 +17,7 @@ public class MainMenu {
 	JLabel user = new JLabel("Username");
 	JFrame Menu = new JFrame("Maze of Fury");
 	JButton Start = new JButton("Login");
+	String userName = "";
 
 	public MainMenu() {
 		
@@ -47,7 +42,8 @@ public class MainMenu {
 		user.setSize(150, 20);
 		user.setLocation(100, 75);
 		Menu.add(user);
-				
+		userName = user.getText();	
+		
 		
 		Start.addActionListener(new ActionListener(){
 
