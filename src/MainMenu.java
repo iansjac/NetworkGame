@@ -20,7 +20,7 @@ public class MainMenu {
 	JLabel ip = new JLabel("Input IP");
 	JLabel portz = new JLabel("Input Port #");
 	JFrame Menu = new JFrame("Maze of Fury");
-	JButton Start = new JButton("Login");
+	JButton Login = new JButton("Login");
 	String userName = "";
 	String ipv6 = "";
 	String port = "";
@@ -35,9 +35,9 @@ public class MainMenu {
 		Menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		//Start Button Variables
-		Start.setSize(100,30);
-		Start.setLocation(100, 225);
-		Menu.add(Start);
+		Login.setSize(100,30);
+		Login.setLocation(100, 225);
+		Menu.add(Login);
 		
 		//text area
 		textArea.setSize(300, 20);
@@ -73,7 +73,7 @@ public class MainMenu {
 		Menu.add(portz);
 		
 		
-		Start.addActionListener(new ActionListener(){
+		Login.addActionListener(new ActionListener(){
 
 			
 			@Override
