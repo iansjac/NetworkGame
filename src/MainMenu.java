@@ -15,7 +15,7 @@ import javax.swing.JTextArea;
  */
 
 public class MainMenu {
-
+//hi janina
 	private JTextArea textArea = new JTextArea();
 	private JTextArea ipv4 = new JTextArea();
 	private JTextArea portnum = new JTextArea();
