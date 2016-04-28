@@ -35,10 +35,7 @@ public class Maze extends JFrame{
 			@Override
 			public void keyPressed(KeyEvent e) {
 				int key = e.getKeyCode();
-				
-				revalidate();
-				repaint();
-				
+		
 				//Player movement
 				if(key == KeyEvent.VK_UP){
 					_player.moveUp();
@@ -73,10 +70,15 @@ public class Maze extends JFrame{
 				
 				
 				if(_player._x == _columns-1 && _player._y == _endLoc){
-					JOptionPane.showMessageDialog(null, "You Win!", "End Game", JOptionPane.INFORMATION_MESSAGE);
-					dispose();
-					//new MainMenu();
+					JOptionPane.showMessageDialog(null, "Player One WINS", "End Game", JOptionPane.INFORMATION_MESSAGE);
+					//dispose();
 				}
+				
+				if(player2._x == _columns+1 && player2._y == endloc2){
+					JOptionPane.showMessageDialog(null, "Player Two Wins", "End Game", JOptionPane.INFORMATION_MESSAGE);
+					//dispose();
+				}
+				
 			}
 
 			@Override
@@ -131,6 +133,9 @@ public class Maze extends JFrame{
                     }
                     if(x == _columns-1){
                     	_endLoc = y;
+                    }
+                    if(x == _columns+1){
+                    	endloc2 = y;
                     }
                 }
                 

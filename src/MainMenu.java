@@ -54,7 +54,7 @@ public class MainMenu {
 			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				new Maze("./Level 0.map");
+				new Maze("./map.map");
 				Menu.setVisible(false);
 			}
 
