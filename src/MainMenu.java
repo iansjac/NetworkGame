@@ -1,6 +1,9 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
@@ -16,6 +19,9 @@ public class MainMenu {
 	private JTextArea textArea = new JTextArea();
 	private JTextArea ipv4 = new JTextArea();
 	private JTextArea portnum = new JTextArea();
+	
+	JLabel image = new JLabel();
+	
 	JLabel user = new JLabel("Username");
 	JLabel ip = new JLabel("Input IP");
 	JLabel portz = new JLabel("Input Port #");
@@ -24,6 +30,9 @@ public class MainMenu {
 	String userName = "";
 	String ipv6 = "";
 	String port = "";
+	
+	
+	
 
 	public MainMenu() {
 		
@@ -38,6 +47,11 @@ public class MainMenu {
 		Login.setSize(100,30);
 		Login.setLocation(100, 225);
 		Menu.add(Login);
+		
+		//background image
+	    image.setIcon(new ImageIcon("myImage"));// your image here
+	    Menu.add(image);
+		
 		
 		//text area
 		textArea.setSize(300, 20);
