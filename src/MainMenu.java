@@ -25,7 +25,7 @@ public class MainMenu {
 	JLabel user = new JLabel("Username");
 	JLabel ip = new JLabel("Input IP");
 	JLabel portz = new JLabel("Input Port #");
-	JFrame Menu = new JFrame("Maze of Fury");
+	JFrame Menu = new JFrame("A-Maze-Ing");
 	JButton Login = new JButton("Login");
 	String userName = "";
 	String ipv6 = "";
@@ -38,54 +38,57 @@ public class MainMenu {
 		
 		//Menu Variables
 		Menu.setResizable(false);
-		Menu.setSize(500, 500);
+		Menu.setSize(700, 453);
 		Menu.setLayout(null);
 		Menu.setLocationRelativeTo(null);
 		Menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		//Start Button Variables
 		Login.setSize(100,30);
-		Login.setLocation(100, 225);
+		Login.setLocation(20, 350);
 		Menu.add(Login);
 		
-		//background image
-	    image.setIcon(new ImageIcon("myImage"));// your image here
-	    Menu.add(image);
+	
 		
 		
 		//text area
-		textArea.setSize(300, 20);
-		textArea.setLocation(100, 100);
+		textArea.setSize(100, 20);
+		textArea.setLocation(20, 200);
 		userName = textArea.getText();
 		Menu.add(textArea);
 		
 		//text area two
-		ipv4.setSize(300, 20);
-		ipv4.setLocation(100, 150);
+		ipv4.setSize(100, 20);
+		ipv4.setLocation(20, 250);
 		ipv6 = ipv4.getText();
 		Menu.add(ipv4);
 		
 		//text are tres
-		portnum.setSize(300, 20);
-		portnum.setLocation(100, 200);
+		portnum.setSize(100, 20);
+		portnum.setLocation(20, 300);
 		port = portnum.getText();
 		Menu.add(portnum);
 			
 		//username
 		user.setSize(150, 20);
-		user.setLocation(100, 75);
+		user.setLocation(20, 175);
 		Menu.add(user);
 		
 		//ip label
 		ip.setSize(150, 20);
-		ip.setLocation(100, 125);
+		ip.setLocation(20, 225);
 		Menu.add(ip);
 		
 		//port label
 		portz.setSize(150, 20);
-		portz.setLocation(100, 175);
+		portz.setLocation(20, 275);
 		Menu.add(portz);
 		
+		//background image
+	    image.setIcon(new ImageIcon("./images/MazeGameTitle.png"));// your image here
+	    image.setSize(700, 500);
+	    image.setLocation(0, -45);
+	    Menu.add(image);
 		
 		Login.addActionListener(new ActionListener(){
 
