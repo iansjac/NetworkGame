@@ -15,7 +15,6 @@ import javax.swing.JTextArea;
  */
 
 public class MainMenu {
-//hi janina
 	private JTextArea textArea = new JTextArea();
 	private JTextArea ipv4 = new JTextArea();
 	private JTextArea portnum = new JTextArea();
@@ -27,12 +26,10 @@ public class MainMenu {
 	JLabel portz = new JLabel("Input Port #");
 	JFrame Menu = new JFrame("A-Maze-Ing");
 	JButton Login = new JButton("Login");
+	
 	String userName = "";
 	String ipv6 = "";
 	String port = "";
-	
-	
-	
 
 	public MainMenu() {
 		
@@ -47,10 +44,7 @@ public class MainMenu {
 		Login.setSize(100,30);
 		Login.setLocation(20, 350);
 		Menu.add(Login);
-		
 	
-		
-		
 		//text area
 		textArea.setSize(100, 20);
 		textArea.setLocation(20, 200);
@@ -68,6 +62,7 @@ public class MainMenu {
 		portnum.setLocation(20, 300);
 		port = portnum.getText();
 		Menu.add(portnum);
+		System.out.println(port);
 			
 		//username
 		user.setSize(150, 20);
@@ -92,7 +87,6 @@ public class MainMenu {
 		
 		Login.addActionListener(new ActionListener(){
 
-			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				new Maze("./map.map");
